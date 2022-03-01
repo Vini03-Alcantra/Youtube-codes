@@ -1,6 +1,6 @@
 const ssl = "?ssl=true";
 const urlConnetcion = process.env.DATABASE_URL+ssl;  
-
+console.log("procces in deploy", urlConnetcion)
 module.exports = {
   "type": "postgres",
   "url": urlConnetcion,   
