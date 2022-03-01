@@ -4,8 +4,8 @@ console.log("procces in deploy", urlConnetcion)
 module.exports = {
   "type": "postgres",
   "url": urlConnetcion,   
-  "extra": {
-    "ssl": "true"
+  "ssl": {
+    "rejectUnauthorized": false
   },
   "entities": [
     "dist/models/**/*.js"
