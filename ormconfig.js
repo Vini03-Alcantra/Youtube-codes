@@ -3,9 +3,12 @@ const urlConnetcion = process.env.DATABASE_URL
 console.log("procces in deploy", urlConnetcion)
 module.exports = {
   "type": "postgres",
-  "url": urlConnetcion,   
-  "ssl": {
-    "rejectUnauthorized": false
+  "url": urlConnetcion,  
+  "ssl": true, 
+  "extra": { 
+    "ssl": { 
+      "rejectUnauthorized": false 
+    }
   },
   "entities": [
     "dist/models/**/*.js"
